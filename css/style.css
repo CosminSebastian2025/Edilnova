@@ -365,12 +365,12 @@ header {
   font-family: inherit;
 }
 
-.form-success-msg {
+.form-status-msg {
   display: none;
   margin-top: 15px;
   padding: 10px;
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #fff3cd;
+  color: #664d03;
   border-radius: 5px;
   text-align: center;
 }

@@ -2,6 +2,8 @@
 
 Questo repository contiene il sito vetrina interattivo e responsive per un'azienda di edilizia e ristrutturazioni (**EdilNova**), pronto per la pubblicazione su **GitHub Pages** e containerizzato tramite **Docker** e **Kubernetes**.
 
+Il modulo contatti è solo front-end e non invia richieste: prima di usarlo per raccogliere contatti va collegato a un servizio di invio.
+
 ---
 
 ## 📁 Struttura della Cartella

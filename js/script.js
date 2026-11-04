@@ -17,18 +17,11 @@ if (hamburger && navLinks) {
 
 // Contact Form Handler
 const contactForm = document.getElementById('contactForm');
-const formSuccess = document.getElementById('formSuccess');
+const formStatus = document.getElementById('formStatus');
 
-if (contactForm) {
+if (contactForm && formStatus) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
-    // Simulate submission
-    formSuccess.style.display = 'block';
-    contactForm.reset();
-
-    setTimeout(() => {
-      formSuccess.style.display = 'none';
-    }, 5000);
+    formStatus.style.display = 'block';
   });
 }
