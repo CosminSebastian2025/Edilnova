@@ -52,11 +52,13 @@ edilnova-website/
 ## 🐳 Docker & Kubernetes (Deployment Avanzato / Cloud)
 
 ### Run locale con Docker Compose
-Per testare il sito locale dentro un server web Nginx tramite Docker:
+Per testare il sito in locale tramite Docker:
 ```bash
-docker-compose up --build -d
+docker compose up --build -d
 ```
-Il sito sarà visibile all'indirizzo `http://localhost:8080`.
+Il sito sarà visibile all'indirizzo `http://localhost:8080`. Questa configurazione è
+per lo sviluppo locale e serve il sito in HTTP; HTTPS va configurato sul reverse proxy
+o sull'ambiente di hosting.
 
 ### Deploy su Kubernetes
 Se desideri distribuire l'applicazione in un cluster Kubernetes (es. Minikube, Kind o Cloud Provider):
