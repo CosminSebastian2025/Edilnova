@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: edilnova-deployment
+  labels:
+    app: edilnova
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: edilnova
+  template:
+    metadata:
+      labels:
+        app: edilnova
+    spec:
+      containers:
+      - name: edilnova-website
+        image: edilnova-website:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: edilnova-service
+spec:
+  type: NodePort
+  selector:
+    app: edilnova
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30080
